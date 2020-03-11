@@ -1,0 +1,477 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>TriImageDB</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen-a1ce949a.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-bccf8c07.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-c5541673.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;html&quot;,&quot;javascript&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-c0ff31bf.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">cURL</a>
+              <a href="#" data-language-name="html">html</a>
+              <a href="#" data-language-name="javascript">VanliaJS</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduce" class="toc-h1 toc-link" data-title="Introduce">Introduce</a>
+          </li>
+          <li>
+            <a href="#version" class="toc-h1 toc-link" data-title="Version">Version</a>
+          </li>
+          <li>
+            <a href="#querys" class="toc-h1 toc-link" data-title="Querys">Querys</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#target" class="toc-h2 toc-link" data-title="target">target</a>
+                  </li>
+                  <li>
+                    <a href="#type" class="toc-h2 toc-link" data-title="type">type</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#examples" class="toc-h1 toc-link" data-title="examples">examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#target-neko-amp-type-url" class="toc-h2 toc-link" data-title="target=neko&amp;type=url">target=neko&amp;type=url</a>
+                  </li>
+                  <li>
+                    <a href="#target-neko-r19-amp-type-list" class="toc-h2 toc-link" data-title="target=neko-r19&amp;type=list">target=neko-r19&amp;type=list</a>
+                  </li>
+                  <li>
+                    <a href="#target-neko-amp-type-buffer" class="toc-h2 toc-link" data-title="target=neko&amp;type=buffer">target=neko&amp;type=buffer</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://discord.gg/FaqbBAT'>Discord</a></li>
+            <li><a href='https://github.com/TritiumNetworks'>Github</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduce'>Introduce</h1>
+<blockquote>
+<p>TriImageDB의 모든 이미지는 고유한 UID를 가지고 있습니다</p>
+
+<p>Target과 UID로 특정 이미지를 읽어올 수 있습니다</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://trinets.xyz:8443/static/&lt;target&gt;/&lt;uid&gt;.&lt;png/jpg...&gt;"</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/static/&lt;target&gt;/&lt;uid&gt;.&lt;png/jpg...&gt;"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'image'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/static/&lt;target&gt;/&lt;uid&gt;.&lt;png/jpg...&gt;'</span>
+</code></pre>
+<p>TriNet의 매우 딥 다크한 이미지 데이터베이스, TriImageDB에 오신것을 환영합니다!<br />
+이곳에 일반인들이 올 경우는 매우 희박하겠지만, 어찌됬든 환영합니다!</p>
+
+<p>TriImageDB에서는 다음의 사이트들에서 이미지를 수집합니다<br />
+<a href="https://www.pixiv.net/en/">Pixiv</a>, 
+<a href="https://danbooru.donmai.us/static/site_map">Danbooru</a>, 
+<a href="https://gelbooru.com/">Gelbooru</a>, 
+<a href="https://rule34.xxx/">Rule 34</a>, 
+<a href="https://www.pinterest.com/">Pinterest</a></p>
+<h1 id='version'>Version</h1>
+<p>TriImageDB에는 많은 API버전들이 있습니다
+그중 현재는 다음의 버전만 제공합니다</p>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://trinets.xyz:8443/api"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1.0"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1.0.0"</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1.0"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1.0.0"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1.0'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1.0.0'</span>
+</code></pre>
+<ul>
+<li>/api <em>(latest)</em></li>
+<li>/api/v1 <em>(LTS)</em></li>
+<li>/api/v1.0</li>
+<li>/api/v1.0.0</li>
+</ul>
+<h1 id='querys'>Querys</h1><h2 id='target'>target</h2>
+<p>TriImageDB에서는 다음의 단계로 이미지를 분류합니다</p>
+
+<blockquote>
+<p>Target 값이 없을 경우 기본값 <code>neko</code>를 사용합니다</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://trinets.xyz:8443/api/v1?target=neko"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?target=neko-r19"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?target=hentai"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?target=hentai-gif"</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?target=neko"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?target=neko-r19"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?target=hentai"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?target=hentai-gif"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?target=neko'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?target=neko-r19'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?target=hentai'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?target=hentai-gif'</span>
+</code></pre>
+<table><thead>
+<tr>
+<th style="text-align: right"><em>Target</em></th>
+<th style="text-align: left">설명</th>
+<th style="text-align: center">NSFW(19금)</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right">neko</td>
+<td style="text-align: left">네코(고양이 수인) 일러스트를 제공합니다</td>
+<td style="text-align: center">아니요</td>
+</tr>
+<tr>
+<td style="text-align: right">neko-r19</td>
+<td style="text-align: left">네코(고양이 수인) 야짤을 제공합니다</td>
+<td style="text-align: center">네</td>
+</tr>
+<tr>
+<td style="text-align: right">hentai</td>
+<td style="text-align: left">광범위한 야짤을 제공합니다</td>
+<td style="text-align: center">네</td>
+</tr>
+<tr>
+<td style="text-align: right">hentai-gif</td>
+<td style="text-align: left">광범위한 야움짤을 제공합니다</td>
+<td style="text-align: center">네</td>
+</tr>
+</tbody></table>
+
+<aside class="notice">
+머신러닝을 통해 야짤과 일반 일러스트를 구분합니다
+</aside>
+<h2 id='type'>type</h2>
+<p>TriImageDB에서는 다음과 같은 데이터 형식을 제공합니다</p>
+
+<blockquote>
+<p>Type 값이 없을 경우 기본값 <code>page</code>를 사용합니다</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://trinets.xyz:8443/api/v1?type=url"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?type=page"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?type=list"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?type=buffer"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?type=listImg"</span>
+curl <span class="s2">"https://trinets.xyz:8443/api/v1?type=redirect"</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?type=url"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?type=page"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?type=list"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?type=buffer"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?type=listImg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?type=redirect"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?type=url'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?type=page'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?type=list'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?type=buffer'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?type=listImg'</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?type=redirect'</span>
+</code></pre>
+<table><thead>
+<tr>
+<th style="text-align: right"><em>Type</em></th>
+<th style="text-align: left">설명</th>
+<th style="text-align: center">제공 방식</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: right">url</td>
+<td style="text-align: left">렌덤으로 한 이미지의 URL을 제공합니다</td>
+<td style="text-align: center">Raw Text</td>
+</tr>
+<tr>
+<td style="text-align: right">page</td>
+<td style="text-align: left">렌덤으로 한 이미지를 읽습니다</td>
+<td style="text-align: center">HTML</td>
+</tr>
+<tr>
+<td style="text-align: right">list</td>
+<td style="text-align: left">DB에 존제하는 모든 이미지의 UID를 제공합니다</td>
+<td style="text-align: center">JSON</td>
+</tr>
+<tr>
+<td style="text-align: right">buffer</td>
+<td style="text-align: left">렌덤으로 한 이미지의 바이너리를 제공합니다</td>
+<td style="text-align: center">Binary</td>
+</tr>
+<tr>
+<td style="text-align: right">listImg</td>
+<td style="text-align: left">DB에 존제하는 모든 이미지를 읽습니다</td>
+<td style="text-align: center">HTML</td>
+</tr>
+<tr>
+<td style="text-align: right">redirect</td>
+<td style="text-align: left">렌덤으로 한 이미지의 URL로 리다이렉트 됩니다</td>
+<td style="text-align: center">HTTP 302</td>
+</tr>
+</tbody></table>
+
+<aside class="warning">
+listImg는 로딩시 매우 오랜 시간이 걸릴 수 있습니다
+</aside>
+<h1 id='examples'>examples</h1><h2 id='target-neko-amp-type-url'>target=neko&amp;type=url</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://trinets.xyz:8443/api/v1?target=neko&amp;type=url"</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?target=neko&amp;type=url"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?target=neko&amp;type=url'</span>
+</code></pre>
+<p><embed height="100" width="100%" src="https://trinets.xyz:8443/api/v1?target=neko&type=url"></p>
+<h2 id='target-neko-r19-amp-type-list'>target=neko-r19&amp;type=list</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://trinets.xyz:8443/api/v1?target=neko-r19&amp;type=list"</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?target=neko-r19&amp;type=list"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'iframe'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?target=neko-r19&amp;type=list'</span>
+</code></pre>
+<p><embed height="300" width="100%" src="https://trinets.xyz:8443/api/v1?target=neko-r19&type=list"></p>
+<h2 id='target-neko-amp-type-buffer'>target=neko&amp;type=buffer</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://trinets.xyz:8443/api/v1?target=neko&amp;type=buffer"</span>
+</code></pre><pre class="highlight html tab-html"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"https://trinets.xyz:8443/api/v1?target=neko&amp;type=buffer"</span><span class="nt">&gt;</span>
+</code></pre><pre class="highlight javascript tab-javascript"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'image'</span><span class="p">).</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">'https://trinets.xyz:8443/api/v1?target=neko&amp;type=buffer'</span>
+</code></pre>
+<p><img height="300" src="https://trinets.xyz:8443/api/v1?target=neko&type=buffer"></p>
+<h1 id='errors'>Errors</h1>
+<p>TriImageDB의 오류코드 목록들입니다:</p>
+
+<table><thead>
+<tr>
+<th>오류코드</th>
+<th>뜻</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>404</td>
+<td>Not Found -- API 버전이 맞지 않음 / 없는 이미지 UID / Query가 잘못됨</td>
+</tr>
+<tr>
+<td>423</td>
+<td>Locked -- 해당되는 Target에 아무런 이미지도 없음 / 아직 공개되지 않은 API</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- 서버에 문제가 있음</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- 서버 업데이트를 위해 잠시 서버가 다운됨</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">cURL</a>
+                <a href="#" data-language-name="html">html</a>
+                <a href="#" data-language-name="javascript">VanliaJS</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
